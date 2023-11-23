@@ -21,6 +21,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import com.google.watermelonmigrasi.core.Constants.REVOKE_ACCESS_ITEM
 import com.google.watermelonmigrasi.core.Constants.SIGN_OUT_ITEM
 
@@ -42,7 +43,8 @@ fun TopBar(
 
                 ) {
                 Text(
-                    text = title
+                    text = title,
+                    color = Color.White,
                 )
                 Row(
                     modifier = Modifier.fillMaxWidth(),
