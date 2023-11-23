@@ -5,11 +5,11 @@ import androidx.compose.runtime.LaunchedEffect
 import androidx.hilt.navigation.compose.hiltViewModel
 import com.google.watermelonmigrasi.components.ProgressBar
 import com.google.watermelonmigrasi.domain.model.Response
-import com.google.watermelonmigrasi.presentation.profile.ProfileViewModel
+import com.google.watermelonmigrasi.presentation.bottom_nav.ButtomNavViewModel
 
 @Composable
 fun ReloadUser(
-    viewModel: ProfileViewModel = hiltViewModel(),
+    viewModel: ButtomNavViewModel = hiltViewModel(),
     navigateToProfileScreen: () -> Unit
 ) {
     when(val reloadUserResponse = viewModel.reloadUserResponse) {

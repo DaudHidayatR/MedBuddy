@@ -10,14 +10,15 @@ import com.google.watermelonmigrasi.components.TopBar
 import com.google.watermelonmigrasi.core.Constants.EMAIL_NOT_VERIFIED_MESSAGE
 import com.google.watermelonmigrasi.core.Constants.VERIFY_EMAIL_SCREEN
 import com.google.watermelonmigrasi.core.Utils.Companion.showMessage
-import com.google.watermelonmigrasi.presentation.profile.ProfileViewModel
-import com.google.watermelonmigrasi.presentation.profile.components.RevokeAccess
+import com.google.watermelonmigrasi.presentation.bottom_nav.ButtomNavViewModel
+import com.google.watermelonmigrasi.presentation.bottom_nav.RevokeAccess
+
 import com.google.watermelonmigrasi.presentation.verify_email.components.ReloadUser
 import com.google.watermelonmigrasi.presentation.verify_email.components.VerifyEmailContent
 
 @Composable
 fun VerifyEmailScreen(
-    viewModel: ProfileViewModel = hiltViewModel(),
+    viewModel: ButtomNavViewModel = hiltViewModel(),
     navigateToProfileScreen: () -> Unit
 ) {
     val scaffoldState = rememberScaffoldState()

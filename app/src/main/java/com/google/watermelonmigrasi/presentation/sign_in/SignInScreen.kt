@@ -15,7 +15,7 @@ import ro.alexmamo.firebasesigninwithemailandpassword.presentation.sign_in.compo
 fun SignInScreen(
     viewModel: SignInViewModel = hiltViewModel(),
     navigateToForgotPasswordScreen: () -> Unit,
-    navigateToSignUpScreen: () -> Unit,
+    navigateToSignUpScreen: () -> Unit
 ) {
     val context = LocalContext.current
 
@@ -31,7 +31,7 @@ fun SignInScreen(
                     viewModel.signInWithEmailAndPassword(email, password)
                 },
                 navigateToForgotPasswordScreen = navigateToForgotPasswordScreen,
-                navigateToSignUpScreen = navigateToSignUpScreen
+                navigateToSignUpScreen = navigateToSignUpScreen,
             )
         }
     )

@@ -7,9 +7,9 @@ import androidx.activity.viewModels
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.collectAsState
 import androidx.compose.ui.ExperimentalComposeUiApi
-
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.google.watermelonmigrasi.navigation.Graph
 import com.google.watermelonmigrasi.navigation.NavGraph
 import com.google.watermelonmigrasi.navigation.Screen
 import com.google.watermelonmigrasi.ui.theme.WatermelonMigrasiTheme
@@ -26,11 +26,13 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         setContent {
             WatermelonMigrasiTheme{
+//                RootNavigationGraph(navController = rememberNavController())
                 navController = rememberNavController()
                 NavGraph(
                     navController = navController
                 )
                 AuthState()
+//                BottomNavigationBar()
             }
         }
     }
@@ -42,7 +44,7 @@ class MainActivity : ComponentActivity() {
             NavigateToSignInScreen()
         } else {
             if (viewModel.isEmailVerified) {
-                NavigateToProfileScreen()
+                HomeScreen()
             } else {
                 NavigateToVerifyEmailScreen()
             }
@@ -57,7 +59,7 @@ class MainActivity : ComponentActivity() {
     }
 
     @Composable
-    private fun NavigateToProfileScreen() = navController.navigate(Screen.ProfileScreen.route) {
+    private fun HomeScreen() = navController.navigate(Graph.HOME) {
         popUpTo(navController.graph.id) {
             inclusive = true
         }

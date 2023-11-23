@@ -5,8 +5,8 @@ import androidx.compose.ui.ExperimentalComposeUiApi
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.google.watermelonmigrasi.presentation.bottom_nav.BottomNavigationBar2
 import com.google.watermelonmigrasi.presentation.forgot_password.ForgotPasswordScreen
-import com.google.watermelonmigrasi.presentation.profile.ProfileScreen
 import com.google.watermelonmigrasi.presentation.sign_in.SignInScreen
 import com.google.watermelonmigrasi.presentation.sign_up.SignUpScreen
 import com.google.watermelonmigrasi.presentation.verify_email.VerifyEmailScreen
@@ -19,7 +19,8 @@ fun NavGraph(
 ) {
     NavHost(
         navController = navController,
-        startDestination = Screen.SignInScreen.route
+        startDestination = Screen.SignInScreen.route,
+        route = Graph.AUTHENTICATION,
     ) {
         composable(
             route = Screen.SignInScreen.route
@@ -56,7 +57,7 @@ fun NavGraph(
         ) {
             VerifyEmailScreen(
                 navigateToProfileScreen = {
-                    navController.navigate(Screen.ProfileScreen.route) {
+                    navController.navigate(Screen.HomeScreen.route) {
                         popUpTo(navController.graph.id) {
                             inclusive = true
                         }
@@ -65,9 +66,15 @@ fun NavGraph(
             )
         }
         composable(
-            route = Screen.ProfileScreen.route
+            route = Graph.HOME
         ) {
-            ProfileScreen()
+            BottomNavigationBar2()
+//            ProgressScreen(navController = navController)
         }
     }
+}
+object Graph {
+    const val ROOT = "root_graph"
+    const val AUTHENTICATION = "auth_graph"
+    const val HOME = "home_graph"
 }

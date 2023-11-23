@@ -1,4 +1,4 @@
-package com.google.watermelonmigrasi.presentation.profile
+package com.google.watermelonmigrasi.presentation.bottom_nav
 
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
@@ -15,7 +15,7 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class ProfileViewModel @Inject constructor(
+class ButtomNavViewModel @Inject constructor(
     private val repo: AuthRepository
 ): ViewModel() {
     var revokeAccessResponse by mutableStateOf<RevokeAccessResponse>(Response.Success(false))
@@ -29,7 +29,6 @@ class ProfileViewModel @Inject constructor(
     }
 
     val isEmailVerified get() = repo.currentUser?.isEmailVerified ?: false
-
     fun signOut() = repo.signOut()
 
     fun revokeAccess() = viewModelScope.launch {
