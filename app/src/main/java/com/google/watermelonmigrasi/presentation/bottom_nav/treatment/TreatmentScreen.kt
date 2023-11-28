@@ -38,19 +38,19 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.layout.ContentScale
-import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavController
 import com.google.watermelonmigrasi.R
-
 import com.google.watermelonmigrasi.ui.theme.WatermelonMigrasiTheme
 import kotlinx.coroutines.launch
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
-fun TreatmentScreen(navController: NavController) {
+fun TreatmentScreen(
+    navigateToMedication: () -> Unit = {},
+    navigateToMeasurement: () -> Unit = {}
+) {
     var openBottomSheet by remember { mutableStateOf(false) }
     val scope = rememberCoroutineScope()
     val bottomSheetState = rememberModalBottomSheetState(
@@ -124,6 +124,12 @@ fun TreatmentScreen(navController: NavController) {
                                 scope.launch { bottomSheetState.hide() }.invokeOnCompletion {
                                     if (!bottomSheetState.isVisible) openBottomSheet = false
                                 }
+                            },
+                            navigateToMedication = {
+                                navigateToMedication()
+                            },
+                            navigateToMeasurement = {
+                                navigateToMeasurement()
                             }
                         )
                     }
@@ -136,7 +142,9 @@ fun TreatmentScreen(navController: NavController) {
 
 @Composable
 fun BottomSheetContent(
-    onHideButtonClick: () -> Unit
+    onHideButtonClick: () -> Unit,
+    navigateToMedication: () -> Unit = {},
+    navigateToMeasurement: () -> Unit = {}
 ) {
     LazyColumn(
         contentPadding = PaddingValues(16.dp)
@@ -147,13 +155,15 @@ fun BottomSheetContent(
                 leadingContent = {
                     Icon(imageVector = Icons.Default.Favorite, contentDescription = null)
                 },
-                modifier = Modifier.clickable(onClick = onHideButtonClick)
+                modifier = Modifier.clickable(onClick = navigateToMedication)
             )
             ListItem(
                 headlineContent = { Text(text = "Measurement") },
                 leadingContent = {
                     Icon(imageVector = Icons.Default.Favorite, contentDescription = null)
-                }
+                },
+                modifier = Modifier.clickable(onClick = navigateToMeasurement)
+
             )
         }
         item {
@@ -169,5 +179,5 @@ fun BottomSheetContent(
 @Preview
 @Composable
 fun PreviewTreatmentScreen() {
-    TreatmentScreen(navController = NavController(LocalContext.current))
+    TreatmentScreen()
 }

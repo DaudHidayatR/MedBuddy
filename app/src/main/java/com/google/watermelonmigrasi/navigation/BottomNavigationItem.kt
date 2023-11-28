@@ -16,22 +16,22 @@ data class BottomNavigationItem(
             BottomNavigationItem(
                 label = "Home",
                 icon = Icons.Filled.Home,
-                route = Screens.Home.route
+                route = ScreenBottom.Home.route
             ),
             BottomNavigationItem(
                 label = "Progress",
                 icon = Icons.Filled.AddChart,
-                route = Screens.Progress.route
+                route = ScreenBottom.Progress.route
             ),
             BottomNavigationItem(
                 label = "Support",
                 icon = Icons.Filled.AccountCircle,
-                route = Screens.Support.route
+                route = ScreenBottom.Support.route
             ),
             BottomNavigationItem(
                 label = "Treatment",
                 icon = Icons.Filled.AccountCircle,
-                route = Screens.Treatment.route
+                route = ScreenBottom.Treatment.route
             ),
         )
     }
