@@ -57,7 +57,7 @@ fun NavGraph(
         ) {
             VerifyEmailScreen(
                 navigateToProfileScreen = {
-                    navController.navigate(Screen.HomeScreen.route) {
+                    navController.navigate(Graph.HOME) {
                         popUpTo(navController.graph.id) {
                             inclusive = true
                         }
@@ -69,14 +69,12 @@ fun NavGraph(
             route = Graph.HOME
         ) {
             BottomNavigationBar2()
-//            ProgressScreen(navController = navController)
         }
     }
 }
+
 object Graph {
-    const val ROOT = "root_graph"
     const val AUTHENTICATION = "auth_graph"
     const val HOME = "home_graph"
-    const val MENSUREMENT = "mensurement_graph"
     const val MEDICATION = "medication_graph"
 }
