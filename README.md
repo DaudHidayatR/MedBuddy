@@ -16,6 +16,9 @@ Daud Hidayat Ramadhan:
 Ananda Wahyan Abdillah:
 - Membuat prototype aplikasi di figma.
 - membantu dalam pembuatan fitur chatbot dan kalender di beranda.
+- Membuat Video promosi untuk ditampikan saat Informatics Expo.
+
+
 ---
 
 Contact Person: Ketua (Daud Hidayat Ramadhan: 085718036517)
