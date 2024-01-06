@@ -20,7 +20,7 @@ Ananda Wahyan Abdillah:
 
 Asista Ainun Jannatin:
 - Membuat poster untuk Inforatics Expo
-- Membuat slide PPT untuk presentasi
+- Membuat slide PPT untuk kebutuhan presentasi
 
 
 ---
