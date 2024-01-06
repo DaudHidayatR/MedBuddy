@@ -19,6 +19,7 @@ Ananda Wahyan Abdillah:
 - Membuat Video promosi untuk ditampikan saat Informatics Expo.
 
 Asista Ainun Jannatin:
+- Ikut berkontribusi dalam riset fitur-fitu untuk aplikasi dengan cara membandingkannya dengan aplikasi-aplikasi yang similar
 - Membuat poster untuk Informatics Expo
 - Membuat slide PPT untuk presentasi
 
