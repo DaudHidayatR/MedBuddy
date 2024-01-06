@@ -22,6 +22,11 @@ Asista Ainun Jannatin:
 - Membuat poster untuk Inforatics Expo
 - Membuat slide PPT untuk presentasi
 
+Ghaniyya Rosyidah. S
+- Membantu membuat prototype aplikasi di figma
+- Ikut berkontribusi dalam riset untuk fitur-fitur aplikasi
+- Membuat poster aplikasi untuk kebutuhan Informatics Expo
+- Menyiapkan slide untuk presentasi project
 
 ---
 
