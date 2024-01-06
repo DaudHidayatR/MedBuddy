@@ -18,9 +18,7 @@ Ananda Wahyan Abdillah:
 - membantu dalam pembuatan fitur chatbot dan kalender di beranda.
 - Membuat Video promosi untuk ditampikan saat Informatics Expo.
 
-Asista Ainun Jannatin:
-- Membuat poster untuk Inforatics Expo
-- Membuat slide untuk kebutuhan presentasi
+
 
 
 ---
