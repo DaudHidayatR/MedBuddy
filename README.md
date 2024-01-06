@@ -19,10 +19,14 @@ Ananda Wahyan Abdillah:
 - Membuat Video promosi untuk ditampikan saat Informatics Expo.
 
 Asista Ainun Jannatin:
-- Membuat poster untuk Inforatics Expo
+- Membuat poster untuk Informatics Expo
 - Membuat slide PPT untuk presentasi
 
-
+Ghaniyya Rosyidah. S
+- Membantu membuat prototype aplikasi di figma
+- Ikut berkontribusi dalam riset untuk fitur-fitur aplikasi
+- Membuat poster aplikasi untuk kebutuhan Informatics Expo
+- Menyiapkan slide untuk presentasi project
 ---
 
 Contact Person: Ketua (Daud Hidayat Ramadhan: 085718036517)
